@@ -12,7 +12,7 @@ public class Pick_The_Greater_Number {
 	
 	
    public static int newChoices(int newUser) {
-	   System.out.println("choose a number from 1 to 10");
+	   System.out.println("choose a number Between 0 to 9");
 		Scanner A = new Scanner(System.in); 
 		newUser= A.nextInt(10);
 		return newUser;
@@ -51,7 +51,7 @@ public class Pick_The_Greater_Number {
 			   System.out.println("Total times you played: "+ totalPlay);
 			   System.out.println("You won "+ wins +" times");
 			   System.out.println("You lost "+ lost +" times");
-			   System.out.println("Tied "+ tie + "times");
+			   System.out.println("Tied "+ tie + " times");
 		   }
 		}
 	}
@@ -64,11 +64,11 @@ public static void result(int a, int b){
 		tie++;
 	}
 	else if(a>b) {
-		System.out.println( "You chose greater number,You won!");
+		System.out.println( "You chose greater number \n    You won!");
 		wins++;
 	}
 	else {
-		System.out.println("Computer Chose greater number computer Won!");
+		System.out.println("Computer Chose greater number \n    computer Won!");
 	    lost++;
 	}
 
@@ -81,8 +81,13 @@ public static void result(int a, int b){
 		Random B = new Random();
 		userChoice= sc.nextInt(10);
 		botChoice = B.nextInt(10);
-				
+		
+		
+      if(userChoice<10)		
 		play(userChoice,botChoice);		
+      
+      else
+    	  System.out.println("Number in not in Range.\n Exitted!");
  }
 }
 
